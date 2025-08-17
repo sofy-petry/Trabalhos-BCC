@@ -1,0 +1,24 @@
+ex 2.3
+Desenvolva um programa em Java capaz de imprimir uma Tabela Verdade para a seguinte expressão: (X e Y) ou Z. A Tabela Verdade deve mostrar todas as combinações possíveis de true e false para as variáveis e seus respectivos resultados. Por exemplo:
+
+false e false ou false = false
+false e false ou true = true
+… (continue com as outras combinações com base no sistema binário)
+
+public class tres{
+    public static void main (String[] args){
+        int x,y,z;
+        for(x=0; x<=1; x++){
+            for(y=0; y<=1; y++){
+                for(z=0;z<=1;z++){
+                    boolean X = (x == 1); //se for igual a 1 dá true
+                    boolean Y = (y == 1);
+                    boolean Z = (z == 1);
+                    boolean fim = X && Y || Z;
+                    System.out.printf(X + " e " + Y + " ou "+ Z + " = "+ fim);
+                    System.out.printf("%n");
+                }
+            }
+        }
+    }
+}

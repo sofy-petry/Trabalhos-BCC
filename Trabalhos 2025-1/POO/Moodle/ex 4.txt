@@ -1,0 +1,228 @@
+ex 4
+Criar um programa em Java com blocos independentes de código (switch case). O programa deve obedecer a seguinte ordem para cada opção numérica fornecida como entrada:
+
+1. Ordenação:
+
+Leia um número inteiro positivo n. 
+Em seguida, leia uma sequência de n números inteiros. 
+Imprima os números em ordem crescente, com um espaçamento simples entre cada número.
+2. Construção de Matriz
+
+Leia dois números inteiros positivos, n e m. 
+Em seguida leia uma quantidade de n × m números. 
+Considere esses números como elementos de uma matriz:
+n representa as linhas de uma matriz.
+m representa as colunas de uma matriz.
+Imprima a matriz de forma convencional:
+Os números da mesma linha devem estar separados por espaços. 
+Ao imprimir o último número de uma linha, faça uma quebra de linha.
+3. Determinante da Matriz
+
+Leia um número inteiro positivo n. 
+Em seguida leia uma quantidade de n² números. 
+Considere esses números como elementos de uma matriz quadrada (An×n). 
+Calcule e imprima o determinante da matriz.
+4. Soma de Matrizes
+
+Faça a leitura de duas matrizes:
+Matriz An×m.
+Matriz Bn×m.
+Some as matrizes A e B.
+Imprima a matriz resultante C da soma.
+5. Multiplicação de Matrizes
+
+Faça a leitura de duas matrizes:
+Inicialmente leia um número m e n.
+Depois leia a Matriz An×m.
+Depois leia a Matriz Bm×n.
+Multiplique as matrizes A e B.
+Imprima a matriz resultante C da multiplicação.
+Observações:
+
+Todas as impressões devem pular linha.
+O código deve priorizar a utilização de tipos orientadas a objetos (obs: Integer ao invés de int, contudo em algumas situações a utilização de tipos primitidos é permitida, usando-os dentro de laços de repetição por exemplo). O não cumprimento dessa regra resultará em descontos na nota final, mesmo que o sistema avalie seu código com nota 10 (dez). 
+Caso um número seja informado ao switch case fora do intervalo permitido, o programa deve simplesmente encerrar a execução. 
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+	public static void main(String[] args) {
+	    Scanner caso = new Scanner(System.in);
+		System.out.println("Escolha uma das opções (1-5)");
+		Integer escolha = caso.nextInt();
+		
+		switch(escolha){
+		    case 1:
+		    System.out.println("Digite um número inteiro:");
+		    int numero = caso.nextInt();
+		    Integer arranjo[] = new Integer[numero];
+		    System.out.println("Digite um array: ");
+		    for(int i=0; i<numero; i++){
+		        arranjo[i] = caso.nextInt();
+		    }
+		    int temp;
+		    for(int i=0; i<numero-1 ; i++){
+		        for(int j=i+1; j<numero; j++){
+		            if(arranjo[i]> arranjo[j]){
+		                temp = arranjo[i];
+		                arranjo[i] = arranjo [j];
+		                arranjo[j] = temp;
+		            }
+		        }
+		    }
+		    System.out.println("Saída:");
+		    for(int i=0; i<numero; i++){
+		        System.out.print(arranjo[i] + " ");
+		    }
+		    break;
+		    
+		    case 2:
+		        System.out.println("Digite um número para linhas:");
+		        int n = caso.nextInt();
+		        
+		        System.out.println("Digite um número para colunas:");
+		        int m = caso.nextInt();
+		        Integer mat[][] = new Integer[n][m];
+		        System.out.println("Digite os elementos da matriz");
+		        
+		        for(int i=0; i<n; i++){
+		            for(int j=0; j<m; j++){
+		                mat[i][j] = caso.nextInt();
+		            }
+		        }
+		        System.out.println("Saída:");
+		        for(int i=0; i<n; i++){
+		            for(int j=0; j<m; j++){
+		                System.out.print(mat[i][j] + " ");
+		            }
+		            System.out.println();
+		        }
+		        break;
+		        
+		    case 3:
+		        System.out.println("Digite n:");
+		        int y=caso.nextInt();
+                Integer[][] matriz = new Integer[y][y];
+                System.out.println("Digite a matriz:");
+                for (int i = 0; i < y; i++) {
+                    for (int j = 0; j < y; j++) {
+                        matriz[i][j] = caso.nextInt();
+                        }
+                }
+                int determinante = 0;
+
+                if (y == 1) {
+                    determinante = matriz[0][0];
+                } else if (y == 2) {
+                    determinante = matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0];
+                } else {
+            
+                for (int j = 0; j < y; j++) {
+                    Integer[][] submatriz = new Integer[y - 1][y - 1];
+
+                for (int i2 = 1; i2 < y; i2++) {
+                    int col = 0;
+                    for (int j2 = 0; j2 < y; j2++) {
+                        if (j2 == j) continue;
+                        submatriz[i2 - 1][col] = matriz[i2][j2];
+                        col++;
+                    }
+                }
+
+                int subdet = submatriz[0][0] * submatriz[1][1] - submatriz[0][1] * submatriz[1][0];
+                int sinal = (j % 2 == 0) ? 1 : -1;
+
+                determinante += sinal * matriz[0][j] * subdet;
+                    }
+                }
+                System.out.println("Saída");
+                System.out.println(determinante);
+                break;
+		        
+		   case 4:
+		       System.out.println("Digite o numero de linhas:");
+		       int L = caso.nextInt();
+		       System.out.println("Digite o numero de colunas:");
+		       int C = caso.nextInt();
+		       
+		       Integer A[][] = new Integer[L][C];
+		       Integer B[][] = new Integer[L][C];
+		       Integer c[][] = new Integer[L][C];
+		       
+		       System.out.println("Digite a matriz A:");
+		       for(int i =0; i< L; i++){
+		           for(int j =0; j<C; j++){
+		               A[i][j] = caso.nextInt();
+		           }
+		       }
+		       
+		       System.out.println("Digite a matriz B:");
+		       for(int i =0; i< L; i++){
+		           for(int j =0; j<C; j++){
+		               B[i][j] = caso.nextInt();
+		           }
+		       }
+		       
+		       for(int i =0; i< L; i++){
+		           for(int j =0; j<C; j++){
+		               c[i][j] = A[i][j] + B[i][j];
+		           }
+		       }
+		       
+		       System.out.println("Saída matriz C:");
+		       for(int i =0; i<L; i++){
+		           for(int j =0; j<C; j++){
+		               System.out.print(c[i][j] + " ");
+		           }
+		           System.out.println();
+		       }
+		       break;
+		    
+		    case 5:
+		        System.out.println("Digite o numero de linhas:");
+		       int Li = caso.nextInt();
+		       System.out.println("Digite o numero de colunas:");
+		       int Co = caso.nextInt();
+		       
+		       Integer D[][] = new Integer[Li][Co];
+		       Integer E[][] = new Integer[Co][Li];
+		       Integer F[][] = new Integer[Li][Li];
+		       
+		       System.out.println("Digite a matriz A:");
+		       for(int i =0; i< Li; i++){
+		           for(int j =0; j<Co; j++){
+		               D[i][j] = caso.nextInt();
+		           }
+		       }
+		       
+		       System.out.println("Digite a matriz B:");
+		       for(int i =0; i< Co; i++){
+		           for(int j =0; j<Li; j++){
+		               E[i][j] = caso.nextInt();
+		           }
+		       }
+		       
+		       for(int i =0; i< Li; i++){
+		           for(int j =0; j<Li; j++){
+		               F[i][j] = 0;
+		               for(int z =0; z< Co; z++){
+		                   F[i][j] += D[i][z] * E[z][j];
+		               }
+		           }
+		       }
+		       System.out.println("Saída matriz C:");
+		       for(int i =0; i<Li; i++){
+		           for(int j =0; j<Li; j++){
+		               System.out.print(F[i][j] + " ");
+		           }
+		           System.out.println();
+		       }
+		       break;
+		  
+		    default:
+		    System.out.println("Encerrando...");
+		}
+		caso.close();
+	}
+}

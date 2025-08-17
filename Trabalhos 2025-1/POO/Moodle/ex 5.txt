@@ -1,0 +1,281 @@
+ex 5
+Complete o programa em Java apresentado. O arquivo principal não deve ser modificado. 
+
+O arquivo veiculo deve conter os atributos: ano, chassi, preco, quilometragem, SemParar. Os dois primeiros são do tipo int, e os depois são do tipo float. SemParar é um atributo que representa uma quantia em dinheiro (qualquer alusão a uma empresa real é mera coincidência). Além dos atributos, há ainda o método PagarPedagio() e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar. 
+
+O arquivo moto é uma classe que herda classe veiculo e que deve conter o atributo: cilindradas. Do tipo inteiro. Além do atributo,  há ainda o método PagarPedagio() que deve debitar 10 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, int cilindradas. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.
+
+O arquivo caminhao é uma classe que herda classe veiculo e que deve conter os atributos: CapacidadeTotal e CapacidadeAtual. Do tipo inteiro. Além dos atributos,  há ainda o método PagarPedagio() que deve debitar 40 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, int CapacidadeTotal. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.  
+
+O arquivo carro é uma classe que herda classe veiculo e que deve conter os atributos: automatico, frequencia e amplitude. Automatico é do tipo lógico e representa se o carro tem ou não câmbio automático. Frequencia e amplitude são objetos do tipo Radio. Além dos atributos,  há ainda o método PagarPedagio() que deve debitar 20 e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar, boolean automatico. Utilize SUPER() para chamar a superclasse e inicializar os atributos em comum.
+
+O arquivo radio é uma classe sem herança  que deve conter os atributos: estacao, canal e volume. Do tipo String, inteiro e inteiro respectivamente.
+
+Todas as classes devem ter gerados os getters e os setters dos seus atributos (mesmo que não sejam usados). No caso do arquivo caminhao o método para alterar o atributo CapacidadeAtual deve receber um valor do tipo inteiro que não ultrapasse CapacidadeTotal, do contrário uma mensagem deve ser exibida: "Carga excedida!". No caso do método construtor do radio, a estação AM deve ser inicializada em 20 e a estação FM deve ser inicializada em 80. Os métodos para aumentar e diminuir o valor do voleme devem incrimentar ou decrementar 10. O volume máximo não pode ultrapassar 100 e nem ficar abaixo de 0. Por fim, o método PagarPedagio() de cada classe deve imprimir: "Dinheiro: "(ondeo
+ deve ser substituito pelo valor do atributo SemParar. E caso não exista valor suficiente para o pagar o pedágio a seguinte mensagem deve ser exibida: "Moto sem dinheiro suficiente!" (supondo que foi uma Moto que não tinha dinheiro). 
+
+public class Principal{
+    public static void main(String[] args){
+        Carro       veiculo1 = new Carro(2024, 12345, 90000, 100, true);
+        Moto        veiculo2 = new Moto(2020, 23456, 20000, 200, 300);
+        Caminhao    veiculo3 = new Caminhao(1984, 6789, 9999999, 500, 200);
+        Carro       veiculo4 = new Carro(1984, 11111, 30000, 0, false);
+        
+        veiculo1.PagarPedagio();
+        veiculo2.PagarPedagio();
+        veiculo3.PagarPedagio();
+        veiculo4.PagarPedagio();
+        
+        System.out.println(veiculo1.frequencia.getCanal());
+        System.out.println(veiculo1.amplitude.getCanal());
+        
+        veiculo4.frequencia.DiminuirVolume();
+        System.out.println(veiculo4.frequencia.getVolume());
+        
+        veiculo4.frequencia.AumentarVolume();
+        veiculo4.frequencia.AumentarVolume();
+        veiculo4.frequencia.AumentarVolume();
+        System.out.println(veiculo1.frequencia.getVolume());
+        System.out.println(veiculo4.frequencia.getVolume());
+        
+        System.out.println(veiculo3.getCapacidadeTotal());
+        System.out.println(veiculo3.getCapacidadeAtual());
+        veiculo3.setCapacidadeAtual(150);
+        System.out.println(veiculo3.getCapacidadeAtual());
+        veiculo3.setCapacidadeAtual(250);
+        System.out.println(veiculo3.getCapacidadeAtual());
+
+    }
+}
+
+public class Veiculo{
+    int ano, chassi;
+    float preco, quilometragem, SemParar;
+    
+    public Veiculo(int ano, int chassi, float preco, float SemParar){
+        this.ano = ano;
+        this.chassi = chassi;
+        this.preco = preco;
+        this.SemParar = SemParar;
+        this.quilometragem = 0;
+    }
+    
+    public void PagarPedagio(){
+    }
+
+    public float getSemParar() {
+        return SemParar;
+    }
+
+    public void setSemParar(float SemParar) {
+        this.SemParar = SemParar;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public int getChassi() {
+        return chassi;
+    }
+
+    public void setChassi(int chassi) {
+        this.chassi = chassi;
+    }
+
+    public float getPreco() {
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        this.preco = preco;
+    }
+
+    public float getQuilometragem() {
+        return quilometragem;
+    }
+
+    public void setQuilometragem(float quilometragem) {
+        this.quilometragem = quilometragem;
+    }
+}   
+
+public class Carro extends Veiculo{
+    boolean automatico;
+    public Radio frequencia;
+    public Radio amplitude;
+    
+    public Carro(int ano, int chassi, float preco, float SemParar, boolean automatico){
+        super(ano, chassi, preco, SemParar);
+        this.automatico = automatico;
+        this.frequencia = new Radio("FM");
+        this.amplitude = new Radio("AM");
+    }
+    
+    @Override
+    public void PagarPedagio() {
+        float tributo = 20;
+        float SaldoAtual = getSemParar();
+    
+        if (SaldoAtual >= tributo) {
+            setSemParar(SaldoAtual - tributo);
+            System.out.println("Dinheiro: " + getSemParar());
+        } else {
+            System.out.println("Carro sem dinheiro suficiente!");
+        }
+    }
+  
+    public boolean getAutomatico() {
+        return automatico;
+    }
+
+    public void setAutomatico(boolean automatico) {
+        this.automatico = automatico;
+    }
+
+    public Radio getFrequencia() {
+        return frequencia;
+    }
+
+    public void setFrequencia(Radio frequencia) {
+        this.frequencia = frequencia;
+    }
+
+    public Radio getAmplitude() {
+        return amplitude;
+    }
+
+    public void setAmplitude(Radio amplitude) {
+        this.amplitude = amplitude;
+    }
+    
+}
+
+public class Caminhao extends Veiculo{
+    int CapacidadeTotal, CapacidadeAtual;
+    public Caminhao(int ano, int chassi, float preco, float SemParar, int CapacidadeTotal) {
+        super(ano, chassi, preco, SemParar);         
+        this.CapacidadeTotal = CapacidadeTotal;
+        this.CapacidadeAtual = 0;
+    }
+    public int getCapacidadeTotal() {
+        return CapacidadeTotal;
+    }
+
+    public void setCapacidadeTotal(int CapacidadeTotal) {
+        this.CapacidadeTotal = CapacidadeTotal;
+    }
+
+    public int getCapacidadeAtual() {
+        return CapacidadeAtual;
+    }
+
+    public void setCapacidadeAtual(int CapacidadeAtual) {
+        if (CapacidadeAtual <= this.CapacidadeTotal) this.CapacidadeAtual = CapacidadeAtual;
+    	else System.out.println("Carga excedida!");
+    }
+    
+    @Override
+    public void PagarPedagio() {
+        float tributo = 40;
+        float SaldoAtual = getSemParar();
+    
+        if (SaldoAtual >= tributo) {
+            setSemParar(SaldoAtual - tributo);
+            System.out.println("Dinheiro: " + getSemParar());
+        } else {
+            System.out.println("Caminhão sem dinheiro suficiente");
+        }
+    }
+    
+}
+
+public class Moto extends Veiculo{
+    int cilindradas;
+
+    public Moto(int ano, int chassi, float preco, float SemParar, int cilindradas) {
+        super(ano, chassi, preco, SemParar); 
+        this.cilindradas = cilindradas;
+    }
+
+    @Override
+    public void PagarPedagio() {
+        float tributo = 10;
+        float SaldoAtual = getSemParar();
+    
+        if (SaldoAtual >= tributo) {
+            setSemParar(SaldoAtual - tributo);
+            System.out.println("Dinheiro: " + getSemParar());
+        } else {
+            System.out.println("Moto sem dinheiro suficiente");
+        }
+    }
+
+    public int getcilindradas() {
+        return cilindradas;
+    }
+
+    public void setcilindradas(int cilindradas) {
+        this.cilindradas = cilindradas;
+    }
+
+    
+}
+
+public class Radio{
+   String estacao;
+   int canal, volume;
+   
+   public Radio(String estacao) {
+   		this.estacao = estacao;
+   		if ("AM".equals(estacao)) this.canal = 20;
+        else if ("FM".equals(estacao)) this.canal = 80;
+        this.volume = 0;
+   }
+   
+       public String getEstacao() {
+        return estacao;
+    }
+
+    public void setEstacao(String estacao) {
+        this.estacao = estacao;
+    }
+
+    public int getCanal() {
+        return canal;
+    }
+
+    public void setCanal(int canal) {
+        this.canal = canal;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        if (volume < 0) this.volume = 0;
+        else if (volume > 100) this.volume = 100;
+        else this.volume = volume;
+    }
+
+    public void AumentarVolume() {
+        if ((volume + 10) <= 100) {
+            volume += 10;
+        } 
+        else volume = 100;
+    }
+
+    public void DiminuirVolume() {
+        if ((volume - 10) >= 0) {
+            volume -= 10;
+        } 
+        else volume = 0;
+    }
+
+    
+}
