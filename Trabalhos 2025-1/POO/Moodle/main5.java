@@ -1,4 +1,4 @@
-ex 5
+/*ex 5
 Complete o programa em Java apresentado. O arquivo principal não deve ser modificado. 
 
 O arquivo veiculo deve conter os atributos: ano, chassi, preco, quilometragem, SemParar. Os dois primeiros são do tipo int, e os depois são do tipo float. SemParar é um atributo que representa uma quantia em dinheiro (qualquer alusão a uma empresa real é mera coincidência). Além dos atributos, há ainda o método PagarPedagio() e o método construtor que deve receber em ordem os seguintes argumentos: int ano, int chassi, float preco, float SemParar. 
@@ -13,8 +13,11 @@ O arquivo radio é uma classe sem herança  que deve conter os atributos: estaca
 
 Todas as classes devem ter gerados os getters e os setters dos seus atributos (mesmo que não sejam usados). No caso do arquivo caminhao o método para alterar o atributo CapacidadeAtual deve receber um valor do tipo inteiro que não ultrapasse CapacidadeTotal, do contrário uma mensagem deve ser exibida: "Carga excedida!". No caso do método construtor do radio, a estação AM deve ser inicializada em 20 e a estação FM deve ser inicializada em 80. Os métodos para aumentar e diminuir o valor do voleme devem incrimentar ou decrementar 10. O volume máximo não pode ultrapassar 100 e nem ficar abaixo de 0. Por fim, o método PagarPedagio() de cada classe deve imprimir: "Dinheiro: "(ondeo
  deve ser substituito pelo valor do atributo SemParar. E caso não exista valor suficiente para o pagar o pedágio a seguinte mensagem deve ser exibida: "Moto sem dinheiro suficiente!" (supondo que foi uma Moto que não tinha dinheiro). 
+*/
 
-public class Principal{
+
+// ESTE CÓDIGO NÂO COMPILA, PRECISA CRIAR MAIN PARA CADA CLASSE!! (acabei juntando tudo aq pra faciliatr a visu)
+public class main5{
     public static void main(String[] args){
         Carro       veiculo1 = new Carro(2024, 12345, 90000, 100, true);
         Moto        veiculo2 = new Moto(2020, 23456, 20000, 200, 300);

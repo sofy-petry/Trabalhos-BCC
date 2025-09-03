@@ -1,4 +1,4 @@
-ex 4
+/*ex 4
 Criar um programa em Java com blocos independentes de código (switch case). O programa deve obedecer a seguinte ordem para cada opção numérica fornecida como entrada:
 
 1. Ordenação:
@@ -42,11 +42,11 @@ Observações:
 Todas as impressões devem pular linha.
 O código deve priorizar a utilização de tipos orientadas a objetos (obs: Integer ao invés de int, contudo em algumas situações a utilização de tipos primitidos é permitida, usando-os dentro de laços de repetição por exemplo). O não cumprimento dessa regra resultará em descontos na nota final, mesmo que o sistema avalie seu código com nota 10 (dez). 
 Caso um número seja informado ao switch case fora do intervalo permitido, o programa deve simplesmente encerrar a execução. 
-
+*/
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Main {
+public class main4 {
 	public static void main(String[] args) {
 	    Scanner caso = new Scanner(System.in);
 		System.out.println("Escolha uma das opções (1-5)");

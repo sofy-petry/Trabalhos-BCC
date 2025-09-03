@@ -1,7 +1,7 @@
-ex 2.2
+/*ex 2.2
 Desenvolva um programa em Java capaz de imprimir todas as tabuadas no intervalo de 1 a 10. A formatação da impressão deve seguir o padrão: "N x 1 = N" (substituindo "N" pelo número da tabuada). Ao final de cada tabuada, uma linha deve ser pulada.
-
-public class dois{
+*/
+public class main22{
     public static void main(String args[]){
         int i, j, resultado;
         for(i=1; i<11; i++){

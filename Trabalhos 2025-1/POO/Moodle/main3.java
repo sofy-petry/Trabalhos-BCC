@@ -1,4 +1,4 @@
-ex 3
+/*ex 3
 Criar um programa em Java com blocos independentes de código (switch case). O programa deve obedecer a seguinte ordem para cada opção numérica fornecida como entrada:
 
 1. Leitura e classificação de um número:
@@ -36,10 +36,10 @@ Observações:
 
 Todas as impressões devem pular linha.
 Caso um número seja informado ao switch case fora do intervalo permitido, o programa deve simplesmente encerrar a execução. 
-
+*/
 import java.util.Scanner;
 
-public class sofi{
+public class main3{
 	public static void main(String[] args) {
 	Scanner caso = new Scanner(System.in);
 	

@@ -1,7 +1,7 @@
-ex 2.5
+/*ex 2.5
 Desenvolva um programa em Java capaz de imprimir todos os números primos menores que 100. Os números devem ser separados por espaços, e não deve haver quebra de linha entre eles (o número 1 NÃO É PRIMO).
-
-public class cinco{
+*/
+public class main25{
     public static void main(String args[]){
         int div=0;
         int i;
