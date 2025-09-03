@@ -1,0 +1,69 @@
+SISTEMA ANIMAL 
+CAVALO
+-Input: Femoral, capim cresço além de frutas como maçã, banana, laranja e melancia. Ademais, a água.
+
+-Transformação: Conversão de nutrientes como proteínas e vitaminas por meio da digestão e deglutição dos alimentos, por exemplo conseguindo ATP através da oxidação da glicose no ciclo de Krebs, a fim de conseguir maior desenvolvimento de massa muscular do equino. Além disso, é necessário que os dentes estejam saudáveis pois até mesmo os menores prejudicam a mastigação, reduzem a ingestão de alimentos, causam menor absorção de nutrientes na dieta. O estômago de equinos é relativamente pequeno, por isso eles não devem preencher a capacidade máxima do estômago, pois, senão o estômago não conseguirá fazer a contração de forma adequada para a digestão dos alimentos. Quando o estômago do equino sofre dilatação, devido ao excesso de gases ou acúmulo de líquidos, ou ainda, devido ao volume ingerido de alimentos, o animal frequentemente sofre de cólicas.
+
+-Output: Energia para o próprio cavalo, além dos componentes não absorvidos dos alimentos são eliminados do cavalo, em forma de fezes, urina e suor.
+
+-Ciclo de Eventos: As fezes do cavalo funcionam como adubo para outras plantas fornecendo matéria orgânica como nitrogênio, fósforo e potássio, além de favorecer a atividade dos micro-organismos no solo. Além disso, a digestão pode desgastar ou romper a camada externa das sementes, processo conhecido como escarificação, tornando-a permeável à água e ao oxigênio e facilitando a germinação. Ao encontrarem um ambiente favorável crescem, criam frutos e servem como input de energia novamente para o cavalo.
+
+-Sintropia: 
+Por exemplo, o acúmulo de glicose por meio da alimentacao acima do necessario de alimentos ricos em açúcar ou carboidratos  poderá ajudar futuramente o cavalo em situações de tensão, caso ele não consiga se alimentar. Esse acúmulo de energia funciona como entropia negativa.
+
+-Input de informação: O cavalo tem sentidos e habilidades para interagir com o ambiente e gerar informações para sua sobrevivência, entre elas, visão, audição, tato, olfato e paladar. Por exemplo, saber a localização de um pomar de macieiras com a sua visão.
+•	Codificação: Por exemplo, perceber que comer capins com folhas muito novas provoca diarreias devido aos baixos teores de fibra, e então, procurar não ingerir mais esse tipo de alimento.
+•	Retroação: Por exemplo, devido ao olfato apurado, eles podem detectar os feromônios sexuais – substâncias químicas com função de atrair sexualmente seres da mesma espécie – identificar se alguma égua está no cio e ir atrás dela.
+
+•	-Homeostase Dinâmica: Termorregulação, por ter uma musculatura desproporcionalmente grande, é gerada uma grande quantidade de calor e para dissipá-lo ocorre a evaporação do suor da superfície da pele
+
+-Diferenciação: No geral, o cavalo é um mamífero, espécie de herbívoro não ruminante forte e veloz que pode se diferenciar dependendo do ambiente, em que muda o foco e aprimoramento de suas habilidades além das experiências vividas, ou seja, cria-se uma especialização naquele ambiente. Por exemplo, ele se diferenciará de si mesmo depois de sobreviver de alguma fuga, visto que terá mais experiência caso ocorra novamente.
+-Equifinalidade: O cavalo se alimenta, se desenvolve e age com a finalidade de alcançar seus objetivos independente dos seus trajetos. Por exemplo, se ele for um cavalo selvagem, ele vai sempre buscar a sobrevivência fugindo e a obtendo inputs de energia, agora se ele for um cavalo doméstico, ele sempre tentará ficar perto de seu dono, para conseguir comida e abrigo.
+
+SISTEMA VEGETAL
+MACIEIRA
+-Input: O input da macieira são os recursos naturais, como nutrientes do solo, água, gás carbônico e luz solar, absorvidos por suas folhas, caules e raízes para obter o desenvolvimento de seus frutos.
+
+-Transformação: Com os nutrientes adquiridos, a macieira é capaz de chegar de 7 a 10 metros e desenvolver folhas, flores e frutos (neste caso a maçã).
+
+-Output: O output de uma macieira, além de ser o resultado do processo de fotossíntese, água e oxigênio, elas também produzem as maçãs.
+
+-Ciclo de Eventos: As maçãs produzidas por ela se tornam alimento para diversos mamíferos. Estes animais produzem fezes que fertilizam o solo e trazem mais recursos para a macieira. Além disso, as sementes não digeridas pelos animais podem cair num solo favorável e gerar novas macieiras.
+
+-Sintropia: No geral, a árvore absorve nutrientes e energia solar que auxiliam no seu desenvolvimento e na produção de maçãs, que alimentam os animais, que fertilizam o solo, não deixando as macieiras morrerem.
+
+-Input de informação: Alguns dos exemplos é a informação de localização de água e nutrientes além de temperatura.
+•	Codificação: Sua codificação é analisar o local/solo em que está alocada e se adaptar de acordo com suas necessidades para se desenvolver de forma saudável.
+•	Retroação: Ajustar o lugar que a árvore está para conseguir mais recursos como água e nutrientes.
+
+-Homeostase Dinâmica: Está ligada às funções fisiológicas das macieiras, entre elas, as respostas às mudanças de estações do ano, que envolvem temperatura, umidade do ar disponibilidade de água e nutrientes. Um exemplo está na retenção controlando a transpiração, em tempos de seca.
+
+-Diferenciação: A composição florística das macieiras é uma das características que as distinguem das outras árvores. Além da estrutura ecológica distinta e sua biodiversidade. A macieira deve ser plantada em terras altas e de clima temperado, porém há variedades que suportam o clima frio ou até mesmo climas mais quentes. Algumas plantas podem crescer mais rapidamente em solos mais férteis e receber maior quantidade de luz solar. 
+
+-Equifinalidade:
+A equifinalidade de uma macieira é de se tornar uma macieira, através de seus métodos de crescer e produzir maçãs saudáveis, independente das condições iniciais em que foi imposta.
+
+
+SISTEMA SOCIAL
+CASA DE SUSHI (restaurante japonês)
+-Input de transformação: Os ingredientes, como variados tipos de peixe, massas, cream cheese, algas, arroz doce, verduras além de molhos como shoyo e tarê.
+
+-Input de manutenção: Funcionários como chefes de cozinha e garçons, equipamentos de cozinha como frigideiras e talheres, além das mesas, cadeiras e hashis.
+
+-Transformação: Os funcionários escolhem os ingredientes e usam os utensílios de cozinha e mais suas habilidades para fazer várias receitas orientais de qualidade com o objetivo desse restaurante crescer e receber mais clientes.
+
+-Output: temakis, hot rolls, rolinhos primavera, urumakis entre outras comidas japonesas.
+
+-Ciclo de eventos: Um cliente da casa de sushi é um vendedor de redes de pesca, e acaba vendendo uma para um pescador que é coincidentemente um dos fornecedores de salmão do restaurante .
+-Sintropia: Com o investimento no bom trabalho desse restaurante com apresentação dos pratos, preparo qualidade do atendimento, reformas constantes e aumento da estrutura além da divulgação da casa de sushi, ela conseguirá mais clientes e adquire uma entropia negativa.
+
+-Input de informação: A casa de sushi consegue informação sobre outros restaurantes japoneses na região (concorrentes).
+-Retroação/feedback negativo:  O restaurante mantém contato com clientes, através de enquetes e conversas em redes sociais, ou até mesmo pessoalmente perguntando a opinião do consumidor, para receber críticas ou sugestões para melhorar no serviço.
+
+-Codificação: Se algum fornecedor não enviou peixes frescos, o restaurante saberá que não é mais para fazer negócio com esse fornecedor. 
+
+-Homeostase dinâmica:  a casa de sushi se adapta às dificuldades quando a venda dos pratos cai despedindo funcionários.
+
+-Diferenciação: Ele se diferenciará dele mesmo ao longo do tempo, devido a novas políticas do restaurante, como limpeza, técnicas de preparo dos alimentos, além da apresentação do espaço. Isso também gerará um diferencial à outros restaurantes, por exemplo, se ele adequar o espaço a risca ás culturas orientais será um diferencial.
+
+-Equifinalidade: Com o objetivo de produzir comida japonesa, o restaurante pode usar técnicas de preparo de diferentes formas, por exemplo, na hora de modelar o arroz pode fazer com as próprias mãos ou utilizar equipamentos que facilitam no preparo.
