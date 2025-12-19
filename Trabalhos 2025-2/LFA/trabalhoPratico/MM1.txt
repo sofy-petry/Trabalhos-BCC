@@ -1,0 +1,47 @@
+q0 q1 q2 q3 q4 q5 q6 q7 q8
+q0
+q8
+1 2 3 4 . N
+0 1 \n
+q0 1 q1 e
+q0 2 q7 0
+q0 3 q1 e
+q0 4 q7 0
+q1 1 q7 0
+q1 2 q2 e
+q1 3 q7 0
+q1 4 q2 e
+q2 1 q7 0
+q2 2 q3 e
+q2 3 q3 e
+q2 4 q3 e
+q3 1 q4 e
+q3 2 q7 0
+q3 3 q4 e
+q3 4 q4 e
+q3 . q8 0
+q4 1 q5 e
+q4 2 q5 e
+q4 3 q7 0
+q4 4 q5 e
+q4 . q8 0
+q5 1 q6 e
+q5 2 q6 e
+q5 3 q6 e
+q5 4 q7 0
+q5 . q8 0
+q6 1 q6 e
+q6 2 q6 e
+q6 3 q6 e
+q6 4 q6 e
+q6 . q8 1
+q7 1 q7 e
+q7 2 q7 e
+q7 3 q7 e
+q7 4 q7 e
+q7 . q8 e
+q8 1 q1 e
+q8 2 q7 0
+q8 3 q1 e
+q8 4 q7 0
+q8 N q8 \n
